@@ -1,0 +1,634 @@
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Starting the Header section */
+header {
+    background-color: #0e4c92;
+    color: white;
+    width: auto;
+    height: 60px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+/* Styling the Nav Section */
+nav {
+    width: 500px;
+}
+header nav ol {
+    display: flex;
+    margin: 8px ;
+    justify-content: space-around;
+    list-style-type: none;
+}
+header nav ol li {
+    transition: transform 0.3s;
+}
+header nav ol li:hover  {
+    transform: translateY(-5px);
+
+}
+header nav ol li a {
+    color: white;
+    text-decoration: none;
+}
+header nav ol li:hover a {
+    color:#f2ca4f;
+    text-decoration: none;
+}
+header nav ol li a .test {
+text-decoration: none;
+    width: 0px;
+    height: 0px;
+    border: #f2ca4f 2px solid;
+    display: none;
+    transition: 0.5s;
+}
+.name {
+    margin: 5px;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.name:hover { 
+    color: #f2ca4f;
+}
+/* ending the nav and the header section */
+
+/* Starting the Intro Section */
+
+.intro {
+    width: auto;
+    height: 500px;
+    padding: 20px;
+    background-color: #f8fafc;
+    position: relative;
+    display: flex;
+    justify-content: center ;
+}
+
+.intro .holder { 
+    align-items: center;
+    width: auto;
+    height: 500px;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+}
+.intro .sent {
+    width: 800px;
+}
+.me {
+    width: 300px;
+    height: 300px;
+    border: 4px solid #f2ca4f;
+    border-radius: 50%;
+
+}
+
+.holder h1 {
+    color:#0e4c92 ;
+    padding: 5px;
+    margin: 10px;
+    width: 450px;
+    font-size: 30px;
+    font-weight: 800;
+}
+.holder p {
+    color: #686f75;
+    padding: 5px;
+    margin: 10px;
+    text-align:left ;
+    width: 600px;
+    line-height: 25px;
+}
+.holder .fbtn {
+    background-color: #1f6fb2;
+    color: white;
+    height: 50px;
+    width: 150px;
+    padding: 5px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.holder .fbtn:hover {
+    transition: 0.5s;
+    background-color:#0c4471 ;
+    transform: translateY(-5px);
+}
+
+/* Finishing the Intro Sectiion */
+
+/* Starting About Me Section */
+
+h2 {
+    color: #0e4c92;
+    padding-top: 100px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 800 ;
+
+}
+.underline {
+  width: 80px;
+  height: 4px;
+  background-color: #f4b400;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+.info img {
+    width: 250px;
+    height: 250px;
+    border: 4px  #0e4c92 solid ;
+    border-radius: 10%;
+}
+.info {
+    margin: 50px;
+    padding:10px;
+    display: flex;
+    justify-content: center;
+}
+.info p {
+    color: #686f75;
+    padding: 5px;
+    margin: 10px;
+    text-align:left ;
+    width:800px;
+    line-height: 30px;
+}
+
+/* Ending About me Section <Easy> */
+
+/* Starting the Skills section */
+
+.skills{
+    width: auto;
+    height: 500px;
+    background-color: #f8fafc;
+    position: relative;
+}
+.skill {
+   position: absolute;
+   bottom: 0;
+}
+
+.items {
+    width: auto;
+    height: 100px;
+    margin: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: center; 
+    line-height: 30px;
+    gap: 20px;
+}
+.items  div {
+    background-color: #fff;     
+    width: 150px;                
+    height: 200px;              
+    display: flex;
+    flex-direction: column;      
+    align-items: center;         
+    justify-content: center;    
+    border-radius: 10px;       
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; 
+    border: 1px solid #f0f0f0;   
+    cursor: pointer;
+}
+.items > div:hover {
+    transform: translateY(-5px);
+}
+.icon {
+    font-size: 2.5rem;
+    color: #004b93;
+    margin-bottom: 10px;
+}
+.descrip {
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+/* Ending the Skill Section */
+
+/* Starting the Modal */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 20% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 500px; 
+  height: 300px;
+  border-radius: 15px;
+  animation-name: animatetop;
+  animation-duration: 0.5s
+}
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; transform:translateY(20px) scale(0.9) rotateX(15deg);}
+  to {top: 0px; opacity: 1}
+}
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body {
+    margin:50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: 250px;
+}
+.modal-icon {
+    color: #0e4c92 ;
+    text-align: center;
+    font-size: 50px;
+}
+.modal-title{
+    font-weight: 800;
+    font-size: 25px;
+    margin-top: 10px;
+}
+.modal-diesc {
+    margin: 15px;
+    
+}
+/* Ending the Modal Part */
+/* Stylingg the Porjects part */
+.Projects{
+    width: auto;
+    height: 900px;
+    background-color: #fff;
+
+}
+.myprojects {
+    width: auto;
+    height: 100px;
+    margin: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: center; 
+    line-height: 30px;
+    gap: 20px;
+}
+.myprojects  .main {
+    background-color: #fff;     
+    position: relative;
+    width:400px;                
+    height: 500px;              
+    border-radius: 10px;       
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;   
+    text-align: left;
+    margin: 10px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.myprojects .main:hover {
+    transform: scale(1.06) ;
+   
+}
+.myprojects .projectCon {
+    display: flex;
+    flex-direction: column;      
+    justify-content: space-around;
+    padding: 20px;
+    
+}
+.myprojects  .main img {
+    width: inherit;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+.myprojects .main:hover  img {
+    transform: scale(1.1) ; 
+    transition: 0.5s;  
+ 
+}
+.myprojects .protitle {
+    color: #2767ac;
+    font-weight: 800;
+}
+.myprojects .proDescrip {
+    margin-top: 20px ;
+    color: #686f75;
+}
+.myprojects .sbtn {
+    border-radius: 10px;
+    background-color: #1f6fb2;
+    color: #fff;
+    margin-top: 50px ;
+    width: 200px;
+    height: 45px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+.myprojects .sbtn:hover {
+    transform: translateY(-5px);
+    background-color:#004b93;
+}
+/* Ending the Porject Section */
+
+/* Contact me section */
+
+.contactMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    height: 1000px;
+    background-color: #f8fafc;
+}
+
+.contact { 
+    width: 500px;
+    height: 550px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.contact_content {
+    width: 500px;
+    height: 550px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly ; 
+    overflow: hidden;
+    position: relative;
+}
+
+label {
+    margin-top: 10px;
+}
+.input { 
+    height: 50px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 2px #ccc solid;
+    background-color: #f8fafc;
+}
+.input:focus{
+    border-color: #2767ac;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: 0.3s;
+    transform: scale(1.01);
+
+}
+.textarea {
+    height: 100px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 2px #ccc solid;
+    background-color: #f8fafc;
+    resize: none;
+    
+}
+.textarea:focus{
+    border-color: #2767ac;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: 0.3s;
+    transform: scale(1.01);
+}
+.ebtn { 
+    border-radius: 10px;
+    background-color: #1f6fb2;
+    color: #fff;
+    margin-top: 50px;
+    width: auto;
+    height: 45px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    font-weight: 700;
+    
+}
+
+.ebtn:hover {
+    transform: translateY(-5px);
+    background-color:#004b93;
+}
+
+/* Ending The Contact Section */
+
+/* Styling the footer section */
+
+footer { 
+    width: auto ;
+    height: 120px;
+    background-color: #0e4c92;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer .icon {
+    padding:2px;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+footer .icon:hover {
+    transform: scale(1.01);
+    color: #f2ca4f;
+}
+
+footer p { 
+    color:#ccc;
+}
+
+/* Finishing the Footer and the Whole Styling  */
+
+/* responsive part  */
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+/* --- Responsive Design --- */
+@media screen and (max-width: 850px) {
+    /* Header & Navbar */
+    header {
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    .menu-toggle {
+        display: block; 
+    }
+    nav {
+        display: none; 
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #0e4c92;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    nav.active {
+        display: block; 
+    }
+    header nav ol {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    header nav ol li {
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Intro Section */
+    .intro {
+        height: auto;
+        padding: 50px 20px;
+    }
+    .intro .holder {
+        flex-direction: column-reverse; 
+        position: static;
+        height: auto;
+        text-align: center;
+        width: 100%;
+    }
+    .intro .sent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .holder h1, .holder p {
+        width: 100%;
+        text-align: center;
+    }
+    .me {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 30px;
+    }
+
+    /* About Me Section */
+    .info {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+    .info img {
+        margin-bottom: 20px;
+    }
+    .info p {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Skills Section */
+    .skills {
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .skill {
+        position: static;
+    }
+    .items {
+        flex-wrap: wrap; 
+        height: auto;
+        margin: 20px 10px;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 90%;
+        margin: 40% auto;
+    }
+
+    /* Projects Section */
+    .Projects {
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .myprojects {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin: 20px;
+    }
+    .myprojects .main {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Contact Section */
+    .contactMe {
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .contact {
+        width: 90%;
+    }
+    .contact_content {
+        width: 100%;
+    }
+}

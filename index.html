@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final</title>
+    <script src="https://kit.fontawesome.com/ada89ec021.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./final.css">
+</head>
+<body>
+    <header>  
+        <div class="name">Mohamed Abdel-gawaad</div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+             </div>        
+        <nav>
+            <ol>
+                <li><a href="#home" >Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skill" >Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ol>
+        </nav>
+    </header>
+    <main class="intro" id="home">
+        <div class="holder">
+            <div class="sent">
+                <h1>Hi, I'm an IT Support specialist </h1>
+                <p>I'm an ambitious IT support professional transitioning into cybersecurity, actively building my skills in networking and penetration testing while aiming to become a senior penetration tester.</p>
+                <button class="fbtn">Download my Cv</button>            
+            </div>            
+            <img class="me"src="./photome.jpg" alt="personal" width="150" height="150">
+        </div>
+    </main>
+    <!-- The main seciton -->
+    <main>
+        <!-- Abouy me section -->
+        <section class="about-me">
+            <h2 id="about" class="about">About Me</h2>
+            <div class="underline"></div>
+            <div class="info">
+                <img src="./photo2.jpeg" alt="">
+                <p>I am an ambitious IT support professional with a strong foundation in networking and hands-on experience in troubleshooting hardware, software, and infrastructure across multiple environments. I have built my knowledge through certifications and self-study, including progressing from CCNA and MCSA, and I am actively transitioning into the cybersecurity field with a clear goal of becoming a senior penetration tester. I continuously work on improving both my technical skills and communication abilities, aiming to deliver effective solutions while growing into a more advanced and specialized role in security.</p>
+            </div>
+        </section>
+        <!-- Ending About me section -->
+        <!-- The Skill Section  -->
+        <section class="skills">
+            <div class="skil">
+                <h2 id="skill" class="h2_sk">Skills</h2>
+                <div class="underline"></div>                
+            </div>
+            <div class="items"></div>
+            <!-- The Modal part -->
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="modal-body">
+                            <i class="modal-icon"></i>
+                            <p class="modal-title"></p>
+                            <p class="modal-diesc"></p>
+                        </div>
+                    </div>
+                </div>  
+                                       
+        </section>
+        <!-- Ending the Skills section -->
+        <!-- Starting the Porjects  section -->
+        <section class="Projects">
+            <div id="projects" class="project_title">
+                <h2 class="headline">Projects</h2>
+                <div class="underline"></div>
+            </div>
+            <div  class="myprojects"></div>
+        </section>
+        <!-- ending the Projects section -->
+        <!-- Starting the Contact Form section -->
+        <section class="contactMe">
+            <div id="contact" class="contact_title">
+                <h2 class="headline">Contact Me</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact">
+                <div class="contact_content">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="name0 input" placeholder="Enter your name">
+                    <p class="nameError"></p>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="email input" placeholder="Enter your Email">
+                    <p class="emailError"></p>
+                    <label for="message">message</label>
+                    <textarea  id="message" class="textarea"placeholder="Write your message here"></textarea>
+                    <p class="messagError"></p>
+                    <button  class="ebtn">Send message</button>                    
+                    </div>
+            </div>         
+        </section>        
+        <!-- Now Just finished Contact form -->
+    </main>
+    <!-- Starting the Footer -->
+     <footer>
+        <div class="icons">
+            <a href="https://github.com/Goda-go" target="_blank" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/mohamed-abdel-gawaad-726411290/" target="_blank" class="icon"><i class="fa-brands fa-square-linkedin"></i></a>
+        </div>
+        <p>&copy; 2026 Mohamed Abdel-gawaad, All rights reserved.</p>
+     </footer>
+    <script src="/final.js"></script>
+</body>
+</html>
