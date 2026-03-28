@@ -6,7 +6,7 @@ This project is a responsive and interactive website built to showcase my skills
 ---
 
 ## 🔗 Live Demo
-[View Live Website](https://your-live-demo-link.com)
+[View Live Website]([https://your-live-demo-link.com](https://goda-go.github.io/My-Portfolio-Project/))
 
 ---
 
